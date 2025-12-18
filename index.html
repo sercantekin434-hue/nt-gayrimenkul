@@ -13,11 +13,16 @@ body{background:#f4f4f4;color:#333;overflow-x:hidden}
 #splash{
  position:fixed;inset:0;background:#000;z-index:9999;
  display:flex;flex-direction:column;align-items:center;justify-content:center;
- animation:hideSplash 1s ease forwards;animation-delay:2.5s
+ animation:hideSplash 1s ease forwards;animation-delay:2.8s
 }
-#splash img{width:180px;margin-bottom:20px;animation:zoom 1.2s ease}
+#splash img{
+ width:190px;
+ border-radius:50%;   /* 🔥 YUVARLAK LOGO */
+ margin-bottom:20px;
+ animation:zoom 1.2s ease
+}
 #splash h1{color:#fff;font-size:26px;letter-spacing:1px}
-#splash p{color:#25D366;margin-top:10px}
+#splash p{color:#25D366;margin-top:10px;font-size:16px}
 @keyframes hideSplash{to{opacity:0;visibility:hidden}}
 @keyframes zoom{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
 
@@ -26,18 +31,27 @@ header{
  background:#000;color:#fff;text-align:center;
  padding:70px 20px
 }
-header img{width:220px;border-radius:50%;margin-bottom:20px}
+header img{
+ width:220px;
+ border-radius:50%;
+ margin-bottom:20px
+}
 header h1{font-size:32px}
-header p{max-width:900px;margin:15px auto;font-size:17px;color:#ddd}
+header p{
+ max-width:900px;margin:15px auto;
+ font-size:17px;color:#ddd;line-height:1.6
+}
 header span{color:#25D366;font-weight:bold}
 
 /* SECTION */
 section{padding:60px 20px;max-width:1100px;margin:auto}
 h2{text-align:center;margin-bottom:40px;font-size:26px}
 
-/* SERVICES */
-.services,.trust-grid,.stats{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px
+/* BOX */
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:25px
 }
 .box{
  background:#fff;border-radius:12px;overflow:hidden;
@@ -56,9 +70,18 @@ h2{text-align:center;margin-bottom:40px;font-size:26px}
 }
 .stats h3{font-size:36px;color:#25D366}
 
-/* FLOAT BUTTONS */
+/* COMMENTS */
+.comment{
+ background:#fff;border-radius:12px;padding:25px;
+ box-shadow:0 8px 20px rgba(0,0,0,.1);
+ text-align:center
+}
+.comment span{color:#f1c40f;font-size:18px}
+
+/* FLOAT */
 .float{
- position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:15px;z-index:999
+ position:fixed;right:20px;bottom:20px;
+ display:flex;flex-direction:column;gap:15px;z-index:999
 }
 .float a{
  display:flex;align-items:center;gap:10px;
@@ -68,6 +91,7 @@ h2{text-align:center;margin-bottom:40px;font-size:26px}
 }
 .whatsapp{background:#25D366}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+.sahibinden{background:#f39c12}
 
 /* FOOTER */
 footer{background:#000;color:#fff;text-align:center;padding:20px}
@@ -91,9 +115,9 @@ footer{background:#000;color:#fff;text-align:center;padding:20px}
 
 <section>
 <h2>Hizmetlerimiz</h2>
-<div class="services">
+<div class="grid">
  <div class="box"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"><div><h3>🏢 Daire</h3><p>Satılık & kiralık daireler</p></div></div>
- <div class="box"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><div><h3>🏡 Villa</h3><p>Müstakil & lüks yaşam</p></div></div>
+ <div class="box"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><div><h3>🏡 Villa</h3><p>Müstakil yaşam alanları</p></div></div>
  <div class="box"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef"><div><h3>🌾 Arsa</h3><p>Yatırıma uygun araziler</p></div></div>
  <div class="box"><img src="https://images.unsplash.com/photo-1628519592419-bf288f08cef5"><div><h3>🚗 Otomotiv</h3><p>Mercedes (siyah) & BMW (beyaz)</p></div></div>
 </div>
@@ -101,7 +125,7 @@ footer{background:#000;color:#fff;text-align:center;padding:20px}
 
 <section>
 <h2>Müşteri Memnuniyeti</h2>
-<div class="trust-grid">
+<div class="grid">
  <div class="box"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"><div><h3>Güler Yüz</h3><p>Samimi ve şeffaf hizmet</p></div></div>
  <div class="box"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"><div><h3>El Sıkışma</h3><p>Güvenli alım-satım</p></div></div>
  <div class="box"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div><h3>Hızlı Sonuç</h3><p>Zaman kaybetmeden işlem</p></div></div>
@@ -109,7 +133,7 @@ footer{background:#000;color:#fff;text-align:center;padding:20px}
 </section>
 
 <section>
-<div class="stats">
+<div class="grid stats">
  <div><h3>100+</h3><p>Mutlu Müşteri</p></div>
  <div><h3>7/24</h3><p>İletişim</p></div>
  <div><h3>%100</h3><p>Memnuniyet</p></div>
@@ -117,15 +141,28 @@ footer{background:#000;color:#fff;text-align:center;padding:20px}
 </section>
 
 <section>
-<div style="background:#fff;padding:35px;border-radius:12px;text-align:center">
- <h2>Neden NT Gayrimenkul?</h2>
- <p>Bizim için her satış bir dostluktur. Güvenle al, güvenle sat.</p>
+<h2>Müşteri Yorumları</h2>
+<div class="grid">
+ <div class="comment"><span>★★★★★</span><p>Çok hızlı ve güvenilir bir satış oldu.</p></div>
+ <div class="comment"><span>★★★★★</span><p>Sürecin başından sonuna kadar ilgililerdi.</p></div>
+ <div class="comment"><span>★★★★★</span><p>Gönül rahatlığıyla tavsiye ederim.</p></div>
 </div>
+</section>
+
+<section>
+<h2>Ofis Konumu</h2>
+<iframe src="https://www.google.com/maps?q=Kayseri&output=embed"
+ width="100%" height="300" style="border:0;border-radius:12px;"></iframe>
+</section>
+
+<section style="text-align:center">
+<a class="sahibinden" style="padding:16px 30px;border-radius:50px;color:#fff;text-decoration:none;font-weight:bold"
+ href="#" target="_blank">🏠 Tüm İlanlarımız (Sahibinden)</a>
 </section>
 
 <div class="float">
  <a class="instagram" href="https://www.instagram.com/nt_gayrimenkulotomotivv">📷 Instagram</a>
- <a class="whatsapp" href="https://wa.me/905358263365">💬 WhatsApp</a>
+ <a class="whatsapp" href="https://wa.me/905358263365?text=Merhaba%20NT%20Gayrimenkul%20sitesinden%20yazıyorum">💬 WhatsApp</a>
 </div>
 
 <footer>© 2025 NT Gayrimenkul & Otomotiv</footer>
@@ -134,8 +171,9 @@ footer{background:#000;color:#fff;text-align:center;padding:20px}
 const boxes=document.querySelectorAll('.box');
 window.addEventListener('scroll',()=>{
  boxes.forEach(b=>{
-  const t=b.getBoundingClientRect().top;
-  if(t<window.innerHeight-100)b.classList.add('show');
+  if(b.getBoundingClientRect().top<window.innerHeight-100){
+   b.classList.add('show');
+  }
  });
 });
 </script>
