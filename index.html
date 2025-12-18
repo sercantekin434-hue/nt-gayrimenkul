@@ -3,46 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NT Gayrimenkul & Otomotiv</title>
+<title>NT Gayrimenkul & Otomotiv | Kayseri</title>
 
 <style>
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
+    background:#f4f6f8;
     color:#333;
 }
 header{
-    background:#111;
+    background:#1f2937;
     color:#fff;
-    padding:25px;
+    padding:30px 20px;
     text-align:center;
 }
+header h1{
+    margin:0;
+    font-size:28px;
+}
+header p{
+    margin-top:10px;
+    font-size:15px;
+    opacity:.9;
+}
 nav{
-    background:#222;
+    background:#111827;
     display:flex;
     justify-content:center;
+    flex-wrap:wrap;
 }
 nav a{
     color:#fff;
-    padding:15px;
+    padding:14px 18px;
     text-decoration:none;
-    font-size:15px;
+    font-size:14px;
 }
 nav a:hover{
-    background:#444;
+    background:#374151;
 }
 .container{
-    padding:20px;
     max-width:1100px;
     margin:auto;
+    padding:25px 15px;
 }
-.card{
+.section{
     background:#fff;
-    padding:20px;
-    margin-bottom:20px;
+    padding:25px;
+    margin-bottom:25px;
     border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.section h2{
+    margin-top:0;
+    color:#111827;
 }
 .services{
     display:grid;
@@ -50,28 +64,41 @@ nav a:hover{
     gap:15px;
 }
 .service{
-    background:#eee;
+    background:#f1f5f9;
     padding:20px;
-    border-radius:8px;
+    border-radius:6px;
     text-align:center;
+    font-weight:bold;
+}
+.links a{
+    display:inline-block;
+    margin-right:15px;
+    margin-top:10px;
+    text-decoration:none;
+    color:#1f2937;
+    font-weight:bold;
 }
 footer{
-    background:#111;
+    background:#1f2937;
     color:#fff;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    font-size:14px;
 }
+
+/* WhatsApp Sabit Buton */
 .whatsapp{
     position:fixed;
-    right:15px;
-    bottom:15px;
+    bottom:20px;
+    right:20px;
     background:#25D366;
     color:#fff;
-    padding:15px 18px;
-    border-radius:50%;
-    font-size:22px;
+    padding:14px 18px;
+    border-radius:50px;
     text-decoration:none;
-    box-shadow:0 4px 8px rgba(0,0,0,.3);
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+    z-index:9999;
 }
 </style>
 </head>
@@ -80,7 +107,7 @@ footer{
 
 <header>
     <h1>NT Gayrimenkul & Otomotiv</h1>
-    <p>Kayseri Geneli Satılık & Kiralık Gayrimenkul – Araç Alım Satım</p>
+    <p>Kayseri genelinde satılık – kiralık gayrimenkul ve otomotiv alım satım hizmetleri</p>
 </header>
 
 <nav>
@@ -92,48 +119,61 @@ footer{
 
 <div class="container">
 
-<section id="anasayfa" class="card">
+<section id="anasayfa" class="section">
     <h2>Hoş Geldiniz</h2>
     <p>
         NT Gayrimenkul & Otomotiv olarak Kayseri’nin tüm ilçelerinde
-        satılık ve kiralık daire, arsa ve otomotiv alım satım hizmeti sunuyoruz.
+        satılık ve kiralık daire, arsa, işyeri ve otomotiv alım satım
+        alanlarında güvenilir hizmet sunuyoruz.
+    </p>
+    <p>
+        Doğru fiyat, şeffaf işlem ve müşteri memnuniyeti bizim için önceliktir.
     </p>
 </section>
 
-<section id="hakkimizda" class="card">
+<section id="hakkimizda" class="section">
     <h2>Hakkımızda</h2>
     <p>
-        Güven, şeffaflık ve doğru fiyat politikası ile
-        müşterilerimize en iyi yatırımı sunmayı hedefliyoruz.
-        Tüm işlemlerimiz profesyonel şekilde yürütülür.
+        Gayrimenkul ve otomotiv sektöründe edindiğimiz tecrübeyle,
+        müşterilerimize hem profesyonel hem de samimi bir hizmet anlayışı sunuyoruz.
+    </p>
+    <p>
+        Amacımız; doğru yatırımı, doğru kişilerle, güvenli şekilde buluşturmaktır.
     </p>
 </section>
 
-<section id="hizmetler" class="card">
+<section id="hizmetler" class="section">
     <h2>Hizmetlerimiz</h2>
     <div class="services">
         <div class="service">🏠 Satılık Daire</div>
         <div class="service">🔑 Kiralık Daire</div>
-        <div class="service">🌍 Arsa & Tarla</div>
+        <div class="service">🌍 Arsa / Tarla</div>
+        <div class="service">🏢 Dükkan / İşyeri</div>
         <div class="service">🚗 Otomotiv Alım Satım</div>
     </div>
 </section>
 
-<section id="iletisim" class="card">
+<section id="iletisim" class="section">
     <h2>İletişim</h2>
-    <p>📍 Kayseri</p>
-    <p>📞 Telefon: 05XX XXX XX XX</p>
-    <p>💬 WhatsApp ile hızlı iletişim</p>
+    <p>📍 Hizmet Bölgesi: Kayseri (Tüm İlçeler)</p>
+    <p>📞 Telefon: <strong>+90 535 826 33 65</strong></p>
+
+    <div class="links">
+        <a href="https://wa.me/905358263365" target="_blank">💬 WhatsApp</a>
+        <a href="#" target="_blank">📸 Instagram</a>
+        <a href="#" target="_blank">🏠 Sahibinden</a>
+    </div>
 </section>
 
 </div>
 
 <footer>
-    © 2025 NT Gayrimenkul & Otomotiv
+    © 2025 NT Gayrimenkul & Otomotiv — Tüm Hakları Saklıdır
 </footer>
 
-<!-- WhatsApp Butonu -->
-<a class="whatsapp" href="https://wa.me/905XXXXXXXXX" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/905358263365" target="_blank">
+💬 WhatsApp
+</a>
 
 </body>
-  </html>
+</html>
