@@ -7,36 +7,27 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#f4f4f4;color:#333;overflow-x:hidden}
+body{background:#f4f4f4;color:#333}
 
-/* SPLASH (KISALTILDI) */
+/* SPLASH */
 #splash{
  position:fixed;inset:0;background:#000;z-index:9999;
  display:flex;flex-direction:column;align-items:center;justify-content:center;
  animation:hideSplash .6s ease forwards;animation-delay:1.2s
 }
-#splash img{
- width:190px;border-radius:50%;margin-bottom:20px;
- animation:zoom .8s ease
-}
-#splash h1{color:#fff;font-size:26px}
-#splash p{color:#25D366;margin-top:10px}
+#splash img{width:180px;border-radius:50%;margin-bottom:20px;animation:zoom .8s ease}
+#splash h1{color:#fff}
+#splash p{color:#25D366;margin-top:8px}
 @keyframes hideSplash{to{opacity:0;visibility:hidden}}
 @keyframes zoom{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
 
 /* HEADER */
 header{
- background:#000;color:#fff;text-align:center;
- padding:70px 20px
+ background:#000;color:#fff;text-align:center;padding:70px 20px
 }
-header img{
- width:220px;border-radius:50%;margin-bottom:20px
-}
+header img{width:220px;border-radius:50%;margin-bottom:20px}
 header h1{font-size:32px}
-header p{
- max-width:900px;margin:15px auto;
- font-size:17px;color:#ddd;line-height:1.6
-}
+header p{max-width:900px;margin:15px auto;color:#ddd;line-height:1.6}
 header span{color:#25D366;font-weight:bold}
 
 /* SECTION */
@@ -45,28 +36,28 @@ h2{text-align:center;margin-bottom:40px;font-size:26px}
 
 /* GRID */
 .grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
  gap:25px
 }
 .box{
  background:#fff;border-radius:12px;overflow:hidden;
  box-shadow:0 8px 20px rgba(0,0,0,.1);
- transform:translateY(25px);opacity:0;
- transition:.5s
+ transform:translateY(25px);opacity:0;transition:.5s
 }
 .box.show{transform:translateY(0);opacity:1}
 .box img{width:100%;height:180px;object-fit:cover}
 .box div{padding:20px}
 
-/* STATS */
-.stats div{
- background:#000;color:#fff;border-radius:12px;
- padding:30px;text-align:center
+/* COMMENTS */
+.comment{
+ background:#fff;border-radius:12px;padding:25px;
+ box-shadow:0 8px 20px rgba(0,0,0,.1);
+ text-align:center
 }
-.stats h3{font-size:36px;color:#25D366}
+.comment h4{margin-bottom:8px}
+.comment span{color:#f1c40f;font-size:18px}
 
-/* FLOAT */
+/* FLOAT BUTTONS */
 .float{
  position:fixed;right:20px;bottom:20px;
  display:flex;flex-direction:column;gap:15px;z-index:999
@@ -74,8 +65,7 @@ h2{text-align:center;margin-bottom:40px;font-size:26px}
 .float a{
  display:flex;align-items:center;gap:10px;
  padding:14px 18px;border-radius:50px;
- color:#fff;font-weight:bold;text-decoration:none;
- box-shadow:0 5px 15px rgba(0,0,0,.3)
+ color:#fff;font-weight:bold;text-decoration:none
 }
 .whatsapp{background:#25D366}
 .instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
@@ -107,6 +97,27 @@ footer{background:#000;color:#fff;text-align:center;padding:20px}
  <div class="box"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><div><h3>🏡 Villa</h3><p>Müstakil yaşam alanları</p></div></div>
  <div class="box"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef"><div><h3>🌾 Arsa</h3><p>Yatırıma uygun araziler</p></div></div>
  <div class="box"><img src="https://images.unsplash.com/photo-1628519592419-bf288f08cef5"><div><h3>🚗 Otomotiv</h3><p>Mercedes (siyah) & BMW (beyaz)</p></div></div>
+</div>
+</section>
+
+<section>
+<h2>Müşteri Yorumları</h2>
+<div class="grid">
+ <div class="comment">
+  <h4>Mehmet K.</h4>
+  <span>★★★★★</span>
+  <p>Ev satış sürecimiz çok hızlı ve sorunsuz ilerledi. Güvenilir bir firma.</p>
+ </div>
+ <div class="comment">
+  <h4>Ayşe T.</h4>
+  <span>★★★★★</span>
+  <p>İlgili, güler yüzlü ve çözüm odaklılar. Kesinlikle tavsiye ederim.</p>
+ </div>
+ <div class="comment">
+  <h4>Ahmet Y.</h4>
+  <span>★★★★★</span>
+  <p>Otomobil alımında her konuda yardımcı oldular, teşekkürler.</p>
+ </div>
 </div>
 </section>
 
