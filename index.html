@@ -15,6 +15,13 @@
 body{
     background:#f4f4f4;
     color:#333;
+    animation:fadeIn 1.2s ease;
+}
+
+/* PAGE LOAD ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
 /* HEADER */
@@ -22,69 +29,79 @@ header{
     background:#000;
     color:#fff;
     text-align:center;
-    padding:30px 15px;
+    padding:35px 15px;
 }
 header img{
-    width:160px;
+    width:150px;
     border-radius:50%;
     margin-bottom:15px;
+    animation:zoomIn 1s ease;
+}
+@keyframes zoomIn{
+    from{transform:scale(0.6); opacity:0;}
+    to{transform:scale(1); opacity:1;}
 }
 header h1{
     font-size:26px;
     margin-bottom:10px;
-    letter-spacing:1px;
 }
 header p{
     font-size:15px;
     opacity:0.9;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-    padding:40px 20px;
+    padding:45px 20px;
     max-width:1100px;
     margin:auto;
 }
 section h2{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:30px;
     font-size:24px;
-    color:#111;
-}
-
-/* ABOUT */
-.about{
-    text-align:center;
-    font-size:16px;
-    line-height:1.7;
 }
 
 /* SERVICES */
 .services{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 .service-box{
     background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+.service-box:hover{
+    transform:translateY(-8px);
+}
+.service-box img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.service-box div{
+    padding:20px;
 }
 .service-box h3{
     margin-bottom:10px;
-    color:#000;
 }
 .service-box p{
     font-size:14px;
     line-height:1.6;
 }
 
-/* CONTACT */
-.contact{
+/* ABOUT */
+.about{
+    background:#fff;
+    border-radius:12px;
+    padding:30px;
     text-align:center;
-    font-size:16px;
-    line-height:1.8;
+    line-height:1.7;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* FLOAT BUTTONS */
@@ -108,13 +125,15 @@ section h2{
     font-size:26px;
     text-decoration:none;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    animation:pulse 1.8s infinite;
 }
-.whatsapp{
-    background:#25D366;
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
 }
-.instagram{
-    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
-}
+.whatsapp{background:#25D366;}
+.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
 
 /* FOOTER */
 footer{
@@ -133,70 +152,62 @@ footer{
 <header>
     <img src="logo.png" alt="NT Gayrimenkul Logo">
     <h1>NT GAYRİMENKUL & OTOMOTİV</h1>
-    <p>Kayseri’nin Tüm İlçelerinde Güvenilir Satış & Kiralama</p>
+    <p>Kayseri’nin Tüm İlçelerinde Güvenilir Çözümler</p>
 </header>
 
 <section class="about">
     <h2>Hakkımızda</h2>
     <p>
-        NT Gayrimenkul & Otomotiv olarak Kayseri’nin tüm ilçelerinde 
-        <strong>satılık ve kiralık gayrimenkul</strong> ile 
-        <strong>otomotiv alım-satım</strong> hizmetleri sunuyoruz.  
-        Güven, şeffaflık ve doğru fiyat politikasıyla müşterilerimize 
-        en doğru çözümleri üretmeyi hedefliyoruz.
+        NT Gayrimenkul & Otomotiv olarak Kayseri genelinde
+        satılık – kiralık gayrimenkul ve otomotiv alım-satım
+        hizmetleri sunuyoruz. Güven, şeffaflık ve doğru fiyat
+        politikası ile yanınızdayız.
     </p>
 </section>
 
 <section>
     <h2>Hizmetlerimiz</h2>
     <div class="services">
+
         <div class="service-box">
-            <h3>🏠 Satılık Daire</h3>
-            <p>
-                Kayseri genelinde bütçenize ve ihtiyaçlarınıza uygun 
-                satılık daire seçenekleri sunuyor, tapu ve süreç takibini 
-                eksiksiz şekilde gerçekleştiriyoruz.
-            </p>
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Satılık Daire">
+            <div>
+                <h3>🏠 Satılık & Kiralık Daire</h3>
+                <p>Merkez ve tüm ilçelerde bütçenize uygun, tapulu ve güvenilir daire seçenekleri.</p>
+            </div>
         </div>
 
         <div class="service-box">
-            <h3>🔑 Kiralık Daire</h3>
-            <p>
-                Merkezi konumlarda, güvenilir kiracılık ve ev sahipliği 
-                süreçleriyle kiralık daire çözümleri sağlıyoruz.
-            </p>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Villa">
+            <div>
+                <h3>🏡 Villa & Müstakil</h3>
+                <p>Bahçeli, lüks ve müstakil villa seçenekleri ile konforlu yaşam alanları.</p>
+            </div>
         </div>
 
         <div class="service-box">
-            <h3>🏡 Villa</h3>
-            <p>
-                Müstakil yaşam isteyenler için satılık ve kiralık 
-                villa seçeneklerini profesyonel danışmanlıkla sunuyoruz.
-            </p>
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="Arsa Tarla">
+            <div>
+                <h3>🌾 Arsa – Tarla – Parsel</h3>
+                <p>Yatırıma uygun, imarlı veya tarım arazileri için doğru yönlendirme.</p>
+            </div>
         </div>
 
         <div class="service-box">
-            <h3>🌾 Tarla & Arsa</h3>
-            <p>
-                Yatırımlık tarla, arsa ve imarlı parsel seçeneklerinde 
-                doğru lokasyon ve kazanç odaklı danışmanlık veriyoruz.
-            </p>
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Otomotiv">
+            <div>
+                <h3>🚗 Otomotiv Alım-Satım</h3>
+                <p>Temiz ve güvenilir araç alım-satımı, hızlı ve sorunsuz işlemler.</p>
+            </div>
         </div>
 
-        <div class="service-box">
-            <h3>🚗 Otomotiv Alım-Satım</h3>
-            <p>
-                Güvenilir araç alım-satımı, piyasa analizi ve hızlı işlem 
-                desteğiyle otomotiv ihtiyaçlarınıza çözüm üretiyoruz.
-            </p>
-        </div>
     </div>
 </section>
 
-<section class="contact">
+<section>
     <h2>İletişim</h2>
-    <p>
-        📞 <strong>Telefon / WhatsApp:</strong> +90 535 826 33 65<br>
+    <p style="text-align:center;font-size:16px;">
+        📞 <strong>WhatsApp:</strong> +90 535 826 33 65<br>
         📍 Kayseri – Tüm İlçeler
     </p>
 </section>
@@ -208,7 +219,7 @@ footer{
 </div>
 
 <footer>
-    © 2025 NT Gayrimenkul & Otomotiv | Tüm Hakları Saklıdır
+    © 2025 NT Gayrimenkul & Otomotiv
 </footer>
 
 </body>
